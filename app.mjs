@@ -11,7 +11,8 @@ function startApp() {
       header.textContent = 'make some magic here!!';
     }
   };
-  
+
+
   // ======= DO NOT EDIT ============== //
-  export default startApp;
+export default startApp
   // ======= EEND DO NOT EDIT ========= //

@@ -5,60 +5,91 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PHONIE</title>
+  
   <!-- stylesheet -->
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>PHONIE</title>
 </head>
-
 <body>
-   <main class="container">
+    <main class="container">
         <div class="card-1">
             <img src="./images/circle-logo.png" class="logo" alt="circle logo">
             <h1>Discover World Class Tech Talents Within <a href="https://altschoolafrica.com/">Altschool Africa's</a> Network</h1>
+            <footer class="footer">
+                <div class="getintouch">
+                    <a href="mailto:aadetunji012@gmail.com"><img src="./images/mail-icon.png" alt="mailbox"></a>
+                    <a href="https://github.com/TheDeola"><img src="./images/github-icon.png" alt="github"></a>
+                    <a href="https://app.netlify.com/teams/thedeola"><img src="./images/netlify-icon.png" alt="netlify"></a>
+                    <a href="https://www.linkedin.com/in/adeolaadetunji/"><img src="./images/linkedin-icon.jpeg" alt="linkedin"></a>
+                    <a href="https://twitter.com/Deolacodes"><img src="./images/twitter-icon.jpeg" alt="twitter"></a>
+                </div>
+            </footer>
         </div>
         <div class="card-2">
             <div class="nav">
                 <span>Already a member?</span>
-                <button type="btn" name="btn" id="signinBtn">Sign In</button>
+                <button type="btn" name="submit" id="signinBtn">Sign In</button>
             </div>
             <div>
                 <h3>Connect to view dashboard</h3>
                 <form action="#" class="form" id="form">
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="name">Name</label>
-                        <input type="text" name="name" value="" placeholder="Enter Name" id="name" required>
+                        <input type="text" name="name" value="" placeholder="Enter Name" id="name">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Name cannot be empty</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="username">Username</label>
-                        <input type="text" name="username" value="" placeholder="Enter Username" id="username" required>
+                        <input type="text" name="username" value="" placeholder="Enter Username" id="username">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Username cannot be empty</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="email">Email</label>
-                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email" required>
+                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Looks like this is not an email</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="phone">Phone</label>
-                        <input type="number" name="phone" value="" placeholder="+234 xxx xxxx xxx" id="phone" required>
+                        <div>
+                            <select name="countries">
+                                <option value="NG">🇳🇬&emsp;+234</option>
+                                <option value="UK">🇬🇧&emsp;+44</option>
+                                <option value="SA">🇿🇦&emsp;+27</option>
+                                <option value="GH">🇧🇴&emsp;+233</option>
+                                <option value="NL">🇳🇱&emsp;+31</option>
+                                <option value="DE">🇩🇰&emsp;+45</option>
+                                <option value="GE">🇩🇪&emsp;+49</option>
+                                <option value="FR">🇫🇷&emsp;+33</option>
+                                <option value="ES">🇪🇸&emsp;+34</option>
+                            </select>
+                            <input type="text" name="phone" value="" placeholder="080x xxxx xxx" id="phone">
+                            <div class="phone-flex">
+                                <div class="first small-circle"></div>
+                                <div class="thin-line"></div>
+                                <div class="small-circle"></div>
+                                <div class="big-circle">
+                                    <img src="./images/loading.gif" alt="" id="network-image">
+                                </div>
+                            </div>
+                        </div>
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Please input correct phone number</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="password">Password</label>
-                        <input type="password" name="password" value="" placeholder="8+ characters" id="password" required>
+                        <input type="password" name="password" value="" placeholder="8+ characters" id="password">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Password cannot be empty</small>
@@ -69,10 +100,10 @@
                         <p class="form-para">Creating an account means you're okay with our <span class="form-span"><a href="#">Terms of Service, Privacy Policy, </a>and our default <span class="form-span"><a href="#">Notification Settings</a>.</p>
                     </div>
 
-                    <button type="submit" name="submit" id="submit">Create Account</button>
+                    <button type="submit" name="button" id="submit">Create Account</button>
                     <p class="form-para">This site is protected by reCAPTCHA and the Google <span class="form-span"><a href="#">Privacy Policy</a></span> and <span class="form-span"><a href="#">Terms of Service </a></span> apply</p>
                 </form>
-                <p class="footer-info">Challenge by <a href="">Circle-171</a> Rockstars</p>
+                <p class="footer-info">&copy; Phonie Challenge by <a href="https://thedeola.netlify.app/">TheDeola</a></p>
             </div>
         </div>
     </main>
@@ -83,18 +114,27 @@
         <div class="card-1">
             <img src="./images/circle-logo.png" class="logo" alt="circle logo">
             <h1>Discover World Class Tech Talents Within <a href="https://altschoolafrica.com/">Altschool Africa's</a> Network</h1>
+            <footer class="footer">
+                <div class="getintouch">
+                    <a href="mailto:aadetunji012@gmail.com"><img src="./images/mail-icon.png" alt="mailbox"></a>
+                    <a href="https://github.com/TheDeola"><img src="./images/github-icon.png" alt="github"></a>
+                    <a href="https://app.netlify.com/teams/thedeola"><img src="./images/netlify-icon.png" alt="netlify"></a>
+                    <a href="https://www.linkedin.com/in/adeolaadetunji/"><img src="./images/linkedin-icon.jpeg" alt="linkedin"></a>
+                    <a href="https://twitter.com/Deolacodes"><img src="./images/twitter-icon.jpeg" alt="twitter"></a>
+                </div>
+            </footer>
         </div>
         <div class="card-2">
             <div class="nav">
                 <span>Not a member?</span>
-                <button type="btn" name="btn" id="signupBtn">Sign Up</button>
+                <button type="btn" name="submit" id="signupBtn">Sign Up</button>
             </div>
             <div>
-                <h3>Connect to view dashboard</h3>
+                <h3>View dashboard</h3>
                 <form action="#" class="form" id="form2">
                     <div class="form-control">
                         <label for="username">Username</label>
-                        <input type="text" name="username" value="" placeholder="Enter Username" id="username2" required>
+                        <input type="text" name="username" value="" placeholder="Enter Username" id="username2">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Username cannot be empty</small>
@@ -102,7 +142,7 @@
 
                     <div class="form-control">
                         <label for="email">Email</label>
-                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email2" required>
+                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email2">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Looks like this is not an email</small>
@@ -110,61 +150,22 @@
 
                     <div class="form-control">
                         <label for="password">Password</label>
-                        <input type="password" name="password" value="" placeholder="8+ characters" id="password2" required>
+                        <input type="password" name="password" value="" placeholder="8+ characters" id="password2">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Password cannot be empty</small>
                     </div>
 
-                    <button type="submit" name="submit" id="signin">Sign In</button>
+                    <button type="submit" target="_blank" href="dashboard.html" name="button" id="signin">Sign In</button>
                 </form>
-                <p class="footer-info">Challenge by <a href="https://thedeola.netlify.app/">Circle-171</a> Rockstars</p>
+                <p class="footer-info">&copy; Phonie Challenge by <a href="https://thedeola.netlify.app/">TheDeola</a></p>
             </div>
         </div>
     </main>
-<!--     <main class ="container">
-    <form>
-      <h2>Student Registration Form</h2>
-      
-      <p> Please fill out the form carefully</p>
-      
-      <label for="fname">First Name*</label><br>
-        <input type="text" name="fname" id="fname"  required><br><br>
-      
-      <label for="lname">Last Name*</label><br>
-        <input type="text" name="lname" id="lname"  required><br><br>
-      
-      <label for="email">E-mail*</label><br>
-        <input type="email" name="email" id ="email" required><br><br>
-
-      <label for="dob">Date of Birth*</label><br>
-        <input type="date" name="dob" id="dob" required><br><br>
-
-      <label for="phonenumber">Phone Number*</label><br>
-        <input type="tel" name="tel" id="tel" required><br>
-        <span>Your phone number won't be disclosed anywhere</span><br><br>
-
-      <label for="gender">Gender*</label><br>
-           <select name="gender" id="gender">
-           <option value="Male">Male</option>
-           <option value="Female">Female</option>
-         </select><br><br>
-
-      <label for="password">Password*</label><br>
-        <input type="password" name="pword" id="pword" required><br><br>
-
-      <label for="password">Confirm Password*</label><br>
-        <input type="password" name="pword" id="pword" required><br><br>
-
-      <button type="submit"> SUBMIT </button>
-      
-    </form>
-  </main> -->
-  <!-- // ============= EEND DO NOT EDIT ============== 
-    // -->
+                          
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
-  <!-- // ============= EEND DO NOT EDIT ============== 
-    // -->
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+                          
 </body>
-
 </html>

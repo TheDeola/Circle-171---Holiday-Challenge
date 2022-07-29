@@ -11,7 +11,7 @@
 :root {
     --Red: hsl(323, 81%, 58%);
     --Green: hsl(170, 58%, 47%);
-    --Blue: hsl(248, 60%, 17%);
+    --Blue: hsl(247, 32%, 21%);
     --DarkBlue: hsl(249, 10%, 26%);
     --GrayishBlue: hsl(246, 25%, 77%);
     --font-family: 'Poppins', sans-serif;
@@ -26,7 +26,7 @@ html, body {
 /* Mobile Responsiveness Starts Here */
 
 body {
-    background-image: url(./images/signin-banner.jpg);
+    /* background-image: url(./images/signin-banner.jpg); */
     background-position: top center;
     color: var(--DarkBlue);
     text-align: center;
@@ -50,7 +50,7 @@ body {
 h1 {
     animation-duration: 3s;
     animation-name: slidein;
-    padding: 0 20px;
+    /* padding: 0 0px; */
     font-size: xx-large;
     margin: 50px auto;
 }
@@ -81,16 +81,6 @@ h3 {
 .nav {
     display: flex;
     flex-direction: column;
-}
-input {
-    padding: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    width: 100%;
-    border-radius: 5px;
-    border: .5px solid var(--GrayishBlue);
-    font-weight: 500;
-    font-family: var(--font-family);
 }
 #signin-banner {
     width: 200px;
@@ -144,7 +134,7 @@ input[radio] {
     text-decoration: none;
 }
 .form input:focus {
-    border: 1px solid black;
+    border: 1px solid rgb(89, 0, 255);
     outline: none;
 }
 .terms {
@@ -161,53 +151,141 @@ small {
 }
 .footer-info {
     font-size: x-small;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .hide {
     display: none;
 }
-
+select {
+    padding: 10px;
+    width: 25%;
+    border-radius: 5px;
+    border: .5px solid var(--GrayishBlue);
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+select:focus {
+    border: 1px solid rgb(89, 0, 255);
+    outline: none;
+}
+#phone {
+    width: 50%;
+}
+.phone-flex {
+    display: flex;
+    position: absolute;
+    margin-top: -40px;
+    right: 0px;
+    width: 20%;
+}
+.small-circle {
+    background-color: white;
+    border: .5px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    height: 2px;
+    margin-top: 10px;
+}
+.first.small-circle {
+    background-color: transparent;
+}
+.thin-line {
+    border: .5px solid white;
+    width: 30%;
+    padding: 0;
+    height: 1px;
+    margin-top: 12px;
+}
+.big-circle {
+    border: .5px solid white;
+    border-radius: 50%;
+    /* padding: 5px; */
+    height: 45px;
+    width: 45px;
+    margin-left: 4%;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+}
+.getintouch {
+    margin-top: 60px;
+}
+.getintouch img[src] {
+    border: 1px solid transparent;
+    border-radius: 48%;
+    width: 40px;
+    height: 30px;
+    padding: 0px 5px;
+}
+.getintouch img[src]:hover {
+    background-color: var(--Red);
+}
+.getintouch span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
 
 /*VALIDATION STYLING CHANGES*/
 
-.form-control{
+.form-control {
     margin-bottom: 10px;
     padding-bottom: 10px;
     position: relative;
 }
-small{
-    visibility: hidden;
+.form input {
+    border: .2px solid var(--DarkBlue);
 }
-.form-control >i {
+.form-control > i {
     position: absolute;
-    top: 22px;
-    right:10px;
+    top: 42px;
+    right: 10px;
     visibility: hidden;
 }
-.form-control small{
+.form-control > small {
     font-size: 12px;
     visibility: hidden;
     position: absolute;
     bottom:0; 
     left: 0;
-    margin-left:70px
+    margin-left: 5px;
 }
-.form-control.error input{
-    border-color: red;
+.form-control.error input {
+    border-color: var(--Red);
 }
-.form-control.error i.fa-exclamation-circle{ 
-    color:rgb(255, 60, 0);
-    visibility:visible
+.form-control.error i.fa-exclamation-circle { 
+    color:var(--Red);
 }
-.form-control.error small{
-    visibility: visible;
-}
-.form-control.success input{
+.form-control.success input {
     border-color: green;
 }
-.form-control.success i.fa-check-circle{
+.form-control.success i.fa-check-circle {
     color:green;
-    visibility:visible
+}
+input {
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+#phone > i {
+    right: 28%;
+    position: absolute;
+}
+#network-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
 
@@ -218,8 +296,8 @@ small{
     }
     .container, .container2 {
         display: flex;
-        min-width: 1440px;
-        margin: 0px auto;
+        width: 1440px;
+        margin: 1% auto;
         color: var(--DarkBlue);
         padding: 1% 5%;
     }
@@ -227,30 +305,32 @@ small{
         width: 150px;
         margin-top: -30px;
         margin-left: -20px;
-        margin-bottom: 30%;
+        /* margin-bottom: 10%; */
     }
     .nav {
         display: inline;
-        margin-bottom: 30px;
+        /* margin-bottom: 10px; */
     }
     h1 {
         font-size: 50px;
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+    .container2 h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     h3 {
-        margin: 70px auto 0;
         font-size: x-large;
         color: var(--DarkBlue);
     }
     .card-1 {
         text-align: left;
         margin-right: 15%;
-        /* margin-left: -10%; */
     }
     .card-2 {
         margin: 0 auto;
         width: 100%;
-        /* margin-right: -10%;
-        margin-left: 20%; */
     }
     .form {
         padding: 25px;
@@ -268,13 +348,12 @@ small{
     #submit, #signin {
         width: 100%;
     }
-    .form-control small{
-        font-size: 12px;
-        visibility: hidden;
-        position: absolute;
-        bottom:0; 
-        left: 0;
-        margin-left:180px
+    .footer {
+        display: flex;
+        justify-content:flex-start;
+    }
+    .footer-info {
+        margin-top: 70px;
     }
     .hide {
         display: none;
